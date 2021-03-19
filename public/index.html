@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="google" content="notranslate" />
+  <meta http-equiv="content-language" content="en" />
+  <title>Control your Raspberry Pi Remotely</title> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+</head>
+
+<body>
+
+<h1><span>Control your Raspberry Pi Remotely</span></h1>
+<p>Best Viewed in Desktop Mode</p>
+
+<div class="browsing">
+ 
+  <table class="responstable">
+
+    <tr class="tableHead">      
+      <th>Label</th>
+      <th>Switch</th>
+      <th>Pin</th>
+      <th>Pin</th>
+      <th>Switch</th>
+      <th>Label</th>
+    </tr>
+
+    <tr>     
+        <td class="tableDataLabel">3.3V</td>         
+        <td class="tableDataSwitch"></td>
+        <td class="tableDataPin"><span class="pin3V">01</span></td>         
+        <td class="tableDataPin"><span class="pin5V">02</span></td>
+        <td class="tableDataSwitch"></td>         
+        <td class="tableDataLabel">5V</td>      
+    </tr>
+
+    <tr>     
+        <td class="tableDataLabel">GPIO 2 (SDA)</td>         
+        <td class="tableDataSwitch">        
+           <label class="switch">
+             <input type="checkbox" id="GPIO2" disabled >
+            <span class="slider round"></span>
+          </label>
+        </td>
+        <td class="tableDataPin"><span class="pin">03</span></td>         
+        <td class="tableDataPin"><span class="pin5V">04</span></td>
+        <td class="tableDataSwitch">      
+        </td>         
+        <td class="tableDataLabel">5V</td>     
+    </tr>
+
+    <tr>     
+        <td class="tableDataLabel">GPIO 3 (SCL)</td>         
+        <td class="tableDataSwitch">        
+           <label class="switch">
+             <input type="checkbox" id="GPIO3" disabled >
+            <span class="slider round"></span>
+          </label>
+        </td>
+        <td class="tableDataPin"><span class="pin">05</span></td>         
+        <td class="tableDataPin"><span class="pinG">06</span></td>
+        <td class="tableDataSwitch"></td>         
+        <td class="tableDataLabel">Ground</td>      
+    </tr>
+
+     <tr>     
+        <td class="tableDataLabel">GPIO 4 (GPCLK0)</td>         
+        <td class="tableDataSwitch">        
+           <label class="switch">
+             <input type="checkbox" id="GPIO4" disabled >
+            <span class="slider round"></span>
+          </label>
+        </td>
+        <td class="tableDataPin"><span class="pin">07</span></td>         
+        <td class="tableDataPin"><span class="pin">08</span></td>
+        <td class="tableDataSwitch">
+           <label class="switch">
+             <input type="checkbox" id="GPIO14" disabled >
+            <span class="slider round"></span>
+          </label>
+        </td>         
+        <td class="tableDataLabel">GPIO 14 (TXD)</td>       
+    </tr>
+
+     <tr>     
+        <td class="tableDataLabel">Ground</td>         
+        <td class="tableDataSwitch">
+        </td>
+        <td class="tableDataPin"><span class="pinG">09</span></td>         
+        <td class="tableDataPin"><span class="pin">10</span></td>
+        <td class="tableDataSwitch">
+           <label class="switch">
+             <input type="checkbox" id="GPIO15" disabled >
+            <span class="slider round"></span>
+          </label>        
+        </td>         
+        <td class="tableDataLabel">GPIO 15 (RXD)</td>       
+    </tr>
+
+     <tr>     
+        <td class="tableDataLabel">GPIO 17</td>         
+        <td class="tableDataSwitch">        
+           <label class="switch">
+             <input type="checkbox" id="GPIO17" disabled >
+            <span class="slider round"></span>
+          </label>
+        </td>
+        <td class="tableDataPin"><span class="pin">11</span></td>         
+        <td class="tableDataPin"><span class="pin">12</span></td>
+        <td class="tableDataSwitch">
+           <label class="switch">
+             <input type="checkbox" id="GPIO18" disabled >
+            <span class="slider round"></span>
+          </label>        
+        </td>         
+        <td class="tableDataLabel">GPIO 18 (PCM_C)</td>       
+    </tr>
+
+     <tr>     
+        <td class="tableDataLabel">GPIO 27 (PCM_D)</td>         
+        <td class="tableDataSwitch">        
+           <label class="switch">
+             <input type="checkbox" id="GPIO27" disabled >
+            <span class="slider round"></span>
+          </label>
+        </td>
+        <td class="tableDataPin"><span class="pin">13</span></td>         
+        <td class="tableDataPin"><span class="pinG">14</span></td>
+        <td class="tableDataSwitch"></td>         
+        <td class="tableDataLabel">Ground</td>        
+    </tr>
+
+     <tr>     
+        <td class="tableDataLabel">GPIO 22</td>         
+        <td class="tableDataSwitch">        
+           <label class="switch">
+             <input type="checkbox" id="GPIO22" disabled >
+            <span class="slider round"></span>
+          </label>
+        </td>
+        <td class="tableDataPin"><span class="pin">15</span></td>         
+        <td class="tableDataPin"><span class="pin">16</span></td>
+        <td class="tableDataSwitch">
+           <label class="switch">
+             <input type="checkbox" id="GPIO23" disabled >
+            <span class="slider round"></span>
+          </label>        
+        </td>         
+        <td class="tableDataLabel">GPIO 23</td>        
+    </tr>
+
+     <tr>     
+        <td class="tableDataLabel">3.3V</td>         
+        <td class="tableDataSwitch">     
+        </td>
+        <td class="tableDataPin"><span class="pin3V">17</span></td>         
+        <td class="tableDataPin"><span class="pin">18</span></td>
+        <td class="tableDataSwitch">
+           <label class="switch">
+             <input type="checkbox" id="GPIO24" disabled >
+            <span class="slider round"></span>
+          </label>        
+        </td>         
+        <td class="tableDataLabel">GPIO 24</td>     
+    </tr>
+
+     <tr>     
+        <td class="tableDataLabel">GPIO 10 (MOSI)</td>         
+        <td class="tableDataSwitch">        
+           <label class="switch">
+             <input type="checkbox" id="GPIO10" disabled >
+            <span class="slider round"></span>
+          </label>
+        </td>
+        <td class="tableDataPin"><span class="pin">19</span></td>         
+        <td class="tableDataPin"><span class="pinG">20</span></td>
+        <td class="tableDataSwitch"></td>         
+        <td class="tableDataLabel">Ground</td>       
+    </tr>
+
+     <tr>     
+        <td class="tableDataLabel">GPIO 9 (MISO)</td>         
+        <td class="tableDataSwitch">        
+           <label class="switch">
+             <input type="checkbox" id="GPIO9" disabled >
+            <span class="slider round"></span>
+          </label>
+        </td>
+        <td class="tableDataPin"><span class="pin">21</span></td>         
+        <td class="tableDataPin"><span class="pin">22</span></td>
+        <td class="tableDataSwitch">
+           <label class="switch">
+             <input type="checkbox" id="GPIO25" disabled >
+            <span class="slider round"></span>
+          </label>
+          
+        </td>         
+        <td class="tableDataLabel">GPIO 25</td>       
+    </tr>
+
+     <tr>     
+        <td class="tableDataLabel">GPIO 11 (SCKL)</td>         
+        <td class="tableDataSwitch">        
+           <label class="switch">
+             <input type="checkbox" id="GPIO11" disabled >
+            <span class="slider round"></span>
+          </label>
+        </td>
+        <td class="tableDataPin"><span class="pin">23</span></td>         
+        <td class="tableDataPin"><span class="pin">24</span></td>
+        <td class="tableDataSwitch">
+
+           <label class="switch">
+             <input type="checkbox" id="GPIO8" disabled >
+            <span class="slider round"></span>
+          </label>
+          
+        </td>         
+        <td class="tableDataLabel">GPIO 8 (CE0)</td>       
+    </tr>
+
+     <tr>     
+        <td class="tableDataLabel">Ground</td>         
+        <td class="tableDataSwitch"></td>
+        <td class="tableDataPin"><span class="pinG">25</span></td>         
+        <td class="tableDataPin"><span class="pin">26</span></td>
+        <td class="tableDataSwitch">
+           <label class="switch">
+             <input type="checkbox" id="GPIO7" disabled >
+            <span class="slider round"></span>
+          </label>        
+        </td>         
+        <td class="tableDataLabel">GPIO 7 (CE1)</td>      
+    </tr>
+
+     <tr>     
+        <td class="tableDataLabel">ID_SD</td>         
+        <td class="tableDataSwitch"></td>
+        <td class="tableDataPin"><span class="pinSD">27</span></td>         
+        <td class="tableDataPin"><span class="pinSD">28</span></td>
+        <td class="tableDataSwitch"></td>         
+        <td class="tableDataLabel">ID_SC</td>       
+    </tr>
+
+    <tr>     
+        <td class="tableDataLabel">GPIO 5</td>         
+        <td class="tableDataSwitch">        
+           <label class="switch">
+             <input type="checkbox" id="GPIO5" disabled >
+            <span class="slider round"></span>
+          </label>
+        </td>
+        <td class="tableDataPin"><span class="pin">29</span></td>         
+        <td class="tableDataPin"><span class="pinG">30</span></td>
+        <td class="tableDataSwitch"></td>         
+        <td class="tableDataLabel">Ground</td>      
+    </tr>
+
+    <tr>     
+        <td class="tableDataLabel">GPIO 6</td>         
+        <td class="tableDataSwitch">        
+           <label class="switch">
+             <input type="checkbox" id="GPIO6" disabled >
+            <span class="slider round"></span>
+          </label>
+        </td>
+        <td class="tableDataPin"><span class="pin">31</span></td>         
+        <td class="tableDataPin"><span class="pin">32</span></td>
+        <td class="tableDataSwitch">
+           <label class="switch">
+             <input type="checkbox" id="GPIO12" disabled >
+            <span class="slider round"></span>
+          </label>        
+        </td>         
+        <td class="tableDataLabel">GPIO 12</td>        
+    </tr>
+
+    <tr>     
+        <td class="tableDataLabel">GPIO 13</td>         
+        <td class="tableDataSwitch">        
+           <label class="switch">
+             <input type="checkbox" id="GPIO13" disabled >
+            <span class="slider round"></span>
+          </label>
+        </td>
+        <td class="tableDataPin"><span class="pin">33</span></td>         
+        <td class="tableDataPin"><span class="pinG">34</span></td>
+        <td class="tableDataSwitch"></td>         
+        <td class="tableDataLabel">Ground</td>     
+    </tr>
+
+    <tr>     
+        <td class="tableDataLabel">GPIO 19 (MISO)</td>         
+        <td class="tableDataSwitch">        
+           <label class="switch">
+             <input type="checkbox" id="GPIO19" disabled >
+            <span class="slider round"></span>
+          </label>
+        </td>
+        <td class="tableDataPin"><span class="pin">35</span></td>         
+        <td class="tableDataPin"><span class="pin">36</span></td>
+        <td class="tableDataSwitch">
+           <label class="switch">
+             <input type="checkbox" id="GPIO16" disabled >
+            <span class="slider round"></span>
+          </label>        
+        </td>         
+        <td class="tableDataLabel">GPIO 16</td>      
+    </tr>
+
+    <tr>     
+        <td class="tableDataLabel">GPIO 26</td>         
+        <td class="tableDataSwitch">        
+           <label class="switch">
+             <input type="checkbox" id="GPIO26" disabled >
+            <span class="slider round"></span>
+          </label>
+        </td>
+        <td class="tableDataPin"><span class="pin">37</span></td>         
+        <td class="tableDataPin"><span class="pin">38</span></td>
+        <td class="tableDataSwitch">
+           <label class="switch">
+             <input type="checkbox" id="GPIO20" disabled >
+            <span class="slider round"></span>
+          </label>
+          
+        </td>         
+        <td class="tableDataLabel">GPIO 20 (MOSI)</td>        
+    </tr>
+
+    <tr>     
+        <td class="tableDataLabel">Ground</td>         
+        <td class="tableDataSwitch"></td>
+        <td class="tableDataPin"><span class="pinG">39</span></td>         
+        <td class="tableDataPin"><span class="pin">40</span></td>
+        <td class="tableDataSwitch">
+           <label class="switch">
+             <input type="checkbox" id="GPIO21" disabled >
+            <span class="slider round"></span>
+          </label>        
+        </td>         
+        <td class="tableDataLabel">GPIO 21 (SCKL)</td>      
+    </tr>
+
+  </table> 
+
+</div>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="main.js"></script>
+
+</body>
+
+
+
+
+
+
+ 
+</html>
